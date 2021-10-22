@@ -25,7 +25,6 @@ for k,v in data.items():
         if new_item[new_keys] is not None:
             count_of_keys[new_keys]+=1
 
-
 for k,v in sorted(count_of_keys.items(), key=lambda item: item[1],reverse=True):
     if v > 10:
         print(k + " " + str(v))
