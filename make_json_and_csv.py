@@ -13,7 +13,6 @@ features = f.read()
 f.close()
 
 features_lst = [feature for feature in features.split("\n")]
-features_lst = features_lst[:40]
 
 final_features = []
 
@@ -26,7 +25,7 @@ for feature in features_lst:
 dct = {}
 
 for k,v in data.items():
-    new_item = flatten(v)
+    new_item = flatten(v,k)
 
     inner_dct = {}
     for feature in final_features:
@@ -52,7 +51,7 @@ for feature in final_features:
 f.write(heading[:-1]+"\n")
 
 for k,v in data.items():
-    new_item = flatten(v)
+    new_item = flatten(v,k)
     entry = ""
     for feature in final_features:
         if new_item.get(feature):

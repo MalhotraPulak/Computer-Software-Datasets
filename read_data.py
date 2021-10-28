@@ -3,13 +3,13 @@ from collections import defaultdict
 
 import json
 
-
-def flatten(d, parent_key='', sep='|'):
+def flatten(d,top_key,parent_key='', sep='|'):
     items = []
     for k, v in d.items():
+        k = k.replace(top_key,'command')
         new_key = parent_key + sep + k if parent_key else k
         if isinstance(v, collections.MutableMapping):
-            items.extend(flatten(v, new_key, sep=sep).items())
+            items.extend(flatten(v,top_key ,new_key, sep=sep).items())
         else:
             items.append((new_key, v))
     return dict(items)
@@ -20,7 +20,7 @@ data = json.load(f)
 count_of_keys = defaultdict(int)
 
 for k,v in data.items():
-    new_item = flatten(v)
+    new_item = flatten(v,k)
     for new_keys in new_item.keys():
         if new_item[new_keys] is not None:
             count_of_keys[new_keys]+=1
