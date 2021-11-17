@@ -41,9 +41,9 @@ f.write(json.dumps(dct, indent=4))
 f.close()
 
 
-## Making CSV
+## Making TSV
 
-f = open('final_data.csv', 'w')
+f = open('final_data.tsv', 'w')
 heading = ""
 for feature in final_features:
     heading += feature + "\t"
