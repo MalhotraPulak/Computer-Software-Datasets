@@ -1,8 +1,8 @@
 import pandas as pd
 from collections import defaultdict
 
-brew_data = pd.read_csv('../brew/brew_data.csv', sep=',')
-macports_data = pd.read_csv('../macports/macports_data.csv', sep=',')
+brew_data = pd.read_csv('../brew/brew_data.tsv', sep='\t')
+macports_data = pd.read_csv('../macports/macports_data.tsv', sep='\t')
 
 # packages_dict = defaultdict(int)
 # for i in macports_data['name']:
@@ -119,7 +119,7 @@ print(macports_data.shape)
 print(inner_merged_total.shape)
 print(inner_merged_total.fillna(0).astype(bool).sum(axis=0).to_string())
 
-inner_merged_total.to_csv('macports_brew_merge_data.csv')
+inner_merged_total.to_csv('macports_brew_merge_data.tsv', sep="\t")
 
 # i=0
 # for items in inner_merged_total.fillna(0).astype(bool).sum(axis=0).iteritems():
