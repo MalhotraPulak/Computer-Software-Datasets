@@ -4,8 +4,8 @@ from read_data import flatten
 
 import json
 
-#f = open('./apt_show_data.txt','r')
-f = open('./final.json','r')
+f = open('./apt_show_data.json','r')
+#f = open('./final.json','r')
 data = f.read()
 data = json.loads(data)
 f.close()
