@@ -1,6 +1,6 @@
 import pprint
 
-with open("./stat_good.txt", "r", errors="ignore") as f:
+with open("./choco_pkg_lst.txt", "r", errors="ignore") as f:
     data = f.readlines()
 data = [x.strip() for x in data]
 package_lines = []

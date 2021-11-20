@@ -38,7 +38,7 @@ print(len(final_features))
 f = open('choco_data.tsv', 'w')
 heading = ""
 for feature in final_features:
-    heading += feature + "\t"
+    heading += feature + "\t\t"
 
 f.write(heading[:-1]+"\n")
 
@@ -47,9 +47,9 @@ for new_item in data:
     entry = ""
     for feature in final_features:
         if new_item.get(feature):
-            entry += str(new_item[feature]) + "\t"
+            entry += str(new_item[feature]) + "\t\t"
         else:
-            entry += "\t"
+            entry += "\t\t"
     
     f.write(entry[:-1]+"\n")
 
