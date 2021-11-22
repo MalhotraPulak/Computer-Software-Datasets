@@ -8,6 +8,7 @@ This repository contains the code, data and analysis for the major project of IR
 
 ### Dataset
 `./datasets` contains final structured dataset released by us.
+```
 .
 ├── dense
 │   ├── apt_data.tsv
@@ -21,6 +22,7 @@ This repository contains the code, data and analysis for the major project of IR
     ├── choco_data.tsv
     ├── macports_brew_merge_data.tsv
     └── macports_data.tsv
+```
 
 ### Reading Dataset
 Use the following command to load dataset in python as a DataFrame.
