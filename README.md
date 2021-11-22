@@ -1,4 +1,4 @@
-## IRE Major Project [WIP]
+## IRE Major Project
 This repository contains the code, data and analysis for the major project of IRE course.
 
 ### Directory structure:
