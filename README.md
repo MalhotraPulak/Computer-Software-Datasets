@@ -1,5 +1,4 @@
-## IRE Major Project
-This repository contains the code, data and analysis for the major project of IRE course.
+## Computer Software Datasets
 
 ### Directory structure:
 - Each data source has its own folder
